@@ -9,7 +9,6 @@ def	cut_positions(descr : str) -> str:
 		if descr.lower().find(i.lower()) != -1:
 			found_words.append(i)
 	ans = ""
-	print(found_words)
 	for i in found_words:
 		if ans != "":
 			ans += "/"
