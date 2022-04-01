@@ -2,11 +2,11 @@ import os
 
 import pandas as pd
 
-positions = ("junior", "middle", "senior")
+positions = ("Junior", "Middle", "Senior")
 def	cut_positions(descr : str) -> str:
 	found_words = []
 	for i in positions:
-		if descr.lower().find(i) != -1:
+		if descr.lower().find(i.lower()) != -1:
 			found_words.append(i)
 	ans = ""
 	for i in found_words:
