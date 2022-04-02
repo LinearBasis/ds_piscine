@@ -18,4 +18,4 @@ def	cut_positions(descr : str) -> str:
 	return ans
 
 df = pd.read_csv("../ex02/hh_sorted.csv")
-print(df["name"].apply(cut_positions))
+df.to_csv("", index=False)
