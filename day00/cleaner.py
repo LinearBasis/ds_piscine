@@ -1,6 +1,7 @@
 import os
 
 import pandas as pd
+import csv
 
 positions = ("Junior", "Middle", "Senior")
 def	cut_positions(descr : str) -> str:
@@ -18,4 +19,4 @@ def	cut_positions(descr : str) -> str:
 	return ans
 
 df = pd.read_csv("../ex02/hh_sorted.csv")
-df.to_csv("", index=False)
+df.to_csv("./hh_positions.csv", index=False, quoting=csv.QUOTE_ALL)
