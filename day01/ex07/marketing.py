@@ -1,5 +1,3 @@
-from pydoc import cli
-from subprocess import call
 import sys
 
 def	call_center(clients, recipients):
