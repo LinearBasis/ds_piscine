@@ -14,8 +14,12 @@ def	get_price(company_name):
 					'NFLX': 416.90,
 					'TSLA': 724.88,
 					'NOK': 3.37		}
-
-	price = STOCKS.get(COMPANIES.get(company_name))
+	
+	company_name = company_name[0].upper() + company_name.lower()[1:]
+	ticker = COMPANIES.get(company_name)
+	if ticker is None:
+		return "Unknown company"
+	price = STOCKS.get(ticker.upper())
 	if price is None:
 		return "Unknown company"
 	return price

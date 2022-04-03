@@ -14,10 +14,10 @@ def	do_cypher(alphabet, alphabet_index, string, num):
 	def	transform_number(char):
 		if char not in alphabet:
 			return char
-		index_in_abc = (alphabet_index[char.lower()] + num) % len(alphabet)
+		index_in_abc = (alphabet_index[char.lower()] + num) % len(alphabet) # 1 и 2 пункты
 		if char.upper() == char:
-			return alphabet[index_in_abc].upper()
-		return alphabet[index_in_abc]
+			return alphabet[index_in_abc].upper() # 4 пункт
+		return alphabet[index_in_abc] # 3 пункт
 			
 	return "".join( [transform_number(i) for i in string] )
 
