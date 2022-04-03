@@ -27,7 +27,7 @@ def main():
 		print(call_center(clients, recipients))
 
 	elif sys.argv[1] == "potential_clients":
-		print(potential_clients(participants, recipients))
+		print(potential_clients(participants, clients))
 	elif sys.argv[1] == "loyalty_program":
 		print(loyalty_program(participants, clients))
 	else:
