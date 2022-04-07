@@ -4,7 +4,7 @@ import timeit
 import random
 
 class Tester:
-	def __init__(self, number=10**7) -> None:
+	def __init__(self, number=10**6) -> None:
 		self.debug = False
 		self.test_funcs = {
 			"my function" : self._test_dict_no_counter,
@@ -51,8 +51,6 @@ class Tester:
 		if self.debug:
 			print(most_common)
 		return most_common
-
-
 
 	def test_one_func(self, func_name):
 		get_time_of_exec = lambda x : timeit.timeit(x, number=self.iters)
