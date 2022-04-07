@@ -4,7 +4,7 @@ import timeit
 import random
 
 class Tester:
-	def __init__(self, number=10**6) -> None:
+	def __init__(self, number=10**7) -> None:
 		self.debug = False
 		self.test_funcs = {
 			"my function" : self._test_dict_no_counter,
@@ -44,7 +44,7 @@ class Tester:
 		if self.no_counter_list_cache is None:
 			self._test_dict_no_counter()
 		dict_counts = self.no_counter_list_cache
-		sorted_values = sorted(self._test_dict_no_counter(), key=lambda x: -1 * dict_counts.get(x))
+		sorted_values = sorted(dict_counts, key=lambda x: -1 * dict_counts.get(x))
 		most_common = []
 		for i in sorted_values[:10]:
 			most_common.append((i, dict_counts[i]))
